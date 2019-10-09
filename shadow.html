@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+   <title>Index Page</title>
+   <h1>THIS IS A SIMPLE JAVASCRIPT GAME</h1>
+   <h2>GUESS A NUMBER BETWEEN 1 TO 10</h2>
+   <link rel="stylesheet" href="styletry.css">
+   <script>
+   function compare_y() {
+    var answer;
+    var x = document.getElementById("myForm");
+   if (x = 7) {
+       answer = "yes";
+   } else {
+       answer = "no";
+   }
+   document.getElementById("demo").innerHTML = "The answer is " + answer;
+   }
+   </script>
+   </head>
+   <!-- Main content -->
+<body>
+   <h1>Index Page</h1>
+<p id="demo"></p>
+   <form id="myForm">
+        <label>Enter your guess</label>
+        <input type="text" class="form-control">
+   <button type="button" onclick="compare_y();">is your guess correct or wrong?</button>
+    </body>
+</html>
