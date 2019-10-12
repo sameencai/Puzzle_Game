@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--jQuery链接-->
+        <script src="https://code.jquery.com/jquery-3.4.1.js"
+                integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+                crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+                integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+                crossorigin="anonymous"></script>
+        <!--jQuery color链接-->
+        <script src="https://github.com/jquery/jquery-color.git"></script>
+        <!--css <link rel="stylesheet" href="style.css"> -->
+        <!--BootstrapCDN-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!--font-->
+        <link href="https://fonts.googleapis.com/css?family=Yatra+One&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <title>Warrior and Dragon</title>
+        <style>
+          body {
+              font-family: 'Yatra One', cursive;
+              font-size: 30px;
+              width:960px;
+                text-align:center;
+              margin:0 auto;
+              margin-top: 50px;
+              color:white;
+              background-color:black }
+        </style>
+  </head>
+  <body>
+        <img src="img\witch2.png" style="width: 200px;height: 200px;">
+        <br></br>
+        <p class="align-middle">Which one following attracts you the most?</p>
+        <div id = 'answer24'>
+            <button id="treasure"  type="button" class="btn btn-outline-secondary"  style="background: url(img/treasure-chest.png);width: 100px;height: 100px;border: hidden;"></button>
+            <button id="love"  type="button" class="btn btn-outline-secondary"  style="background: url(img/爱情.png);width: 100px;height: 100px;border: hidden;"></button>
+            <button id="challenge"  type="button" class="btn btn-outline-secondary"  style="background: url(img/挑战.png);width: 100px;height: 100px;border: hidden;"></button>
+        </div>  
+        <!--从这开始复制-->
+
+        <!--财宝线-->
+        <script>
+                $(document).ready(function(){
+                    $("#treasure").click(function(){
+                    $("p").text("Great, now you can choose 1 weapons as followed:");
+                    $("#treasure").hide();
+                    $("#love").hide();
+                    $("#challenge").hide();
+                    $("#answer21").fadeIn();
+                    });
+                });
+            </script>
+    <div id = weapons>
+        <button id="sword"  type="button" class="btn btn-outline-secondary"  style="background: url(img/宝剑.png);width: 100px;height: 100px;border: hidden;"></button>
+        <button id="bomb"  type="button" class="btn btn-outline-secondary"  style="background: url(img/炸弹.png);width: 100px;height: 100px;border: hidden;"></button>
+        <button id="cloak"  type="button" class="btn btn-outline-secondary"  style="background: url(img/斗篷.png);width: 110px;height: 100px;border: hidden;"></button>
+    </div>
+    <div id="detail">
+        <p id='sworddetail' style="display: none;">sword detial</p>
+        <p id='bombdetail' style="display: none;">bomb detial</p>
+        <p id='cloakdetail' style="display: none;">cloak detial</p>
+    </div>
+    <script>
+    $(document).ready(function(){
+        $("#sword").mouseenter(function(){
+          $("#sworddetail").fadeIn();
+        });
+        $("#sword").mouseleave(function(){
+            $("#sworddetail").hide();
+        });
+      });$(document).ready(function(){
+        $("#bomb").mouseenter(function(){
+          $("#bombdetail").fadeIn();
+        });
+        $("#bomb").mouseleave(function(){
+            $("#bombdetail").hide();
+        });
+      });$(document).ready(function(){
+        $("#cloak").mouseenter(function(){
+          $("#cloakdetail").fadeIn();
+        });
+        $("#cloak").mouseleave(function(){
+            $("#cloakdetail").hide();
+        });
+      });
+    </script>
+    </body>
+    </html>

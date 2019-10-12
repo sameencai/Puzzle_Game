@@ -1,37 +1,166 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--jQuery链接-->
+        <script src="https://code.jquery.com/jquery-3.4.1.js"
+                integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+                crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+                integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+                crossorigin="anonymous"></script>
+        <!--jQuery color链接-->
+        <script src="https://github.com/jquery/jquery-color.git"></script>
+        <!--css <link rel="stylesheet" href="style.css"> -->
+        <!--BootstrapCDN-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!--font-->
+        <link href="https://fonts.googleapis.com/css?family=Yatra+One&display=swap" rel="stylesheet">
+        <title>Warrior and Dragon</title>
+        <style>
+          body {
+              font-family: 'Yatra One', cursive;
+              font-size: 30px;
+              width:960px;
+                text-align:center;
+              margin:0 auto;
+              margin-top: 50px;
+              color:white;
+              background-color:black }
+        </style>
   </head>
   <body>
-    <h1>Hello, world!</h1>
-    <form>
-            <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-            </div>
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <img src="img\witch2.png" style="width: 200px;height: 200px;">
+    <br></br>
+    <p class="align-middle">Wake up, my warrior</p>
+      <button id="answer1"type="button" class="btn btn-outline-secondary">Hum...What?</button>
+      <script>
+          $(document).ready(function(){
+            $("#answer1").click(function(){
+              $("p").text("Welcome, young warrior");
+              $("#answer1").hide();
+              $("#answer2").fadeIn();
+            });
+          });
+      </script>
+      <button id="answer2" type="button" class="btn btn-outline-secondary" style="display: none;">Hi?</button>
+      <script>
+             $(document).ready(function(){
+               $("#answer2").click(function(){
+                 $("p").text("This is the best world, and the worst world").fadeIn('slow');
+                 $("#answer2").hide();
+                 $("#answer3").fadeIn();
+               });
+             });
+         </script>
+         <button id="answer3" type="button" class="btn btn-outline-secondary" style="display: none;">Continue</button>
+      <script>
+             $(document).ready(function(){
+               $("#answer3").click(function(){
+                 $("p").text("You can find your fortune and win the beloved princess").fadeIn('slow');
+                 $("#answer3").hide();
+                 $("#answer4").fadeIn();
+               });
+             });
+         </script>
+         <button id="answer4"  type="button" class="btn btn-outline-secondary"  style="display: none;">Wow!</button>
+         <script>
+            $(document).ready(function(){
+              $("#answer4").click(function(){
+                $("p").text("Or killed by the evil dragon").fadeIn('slow');
+                $("#answer4").hide();
+                $("#answer5").fadeIn();
+              });
+            });
+        </script>
+        <button id="answer5"  type="button" class="btn btn-outline-secondary"  style="display: none;">Mm...</button>
+        <script>
+            $(document).ready(function(){
+              $("#answer5").click(function(){
+                $("p").text("Give me your name and get to start").fadeIn('slow');
+                $("#answer5").hide();
+                $("#name").fadeIn();
+              });
+            });
+        </script>
+        <div id = 'name' style="display: none;">
+        <input id="nameinput" class="form-control form-control-lg" type="text" placeholder="NAME" style="width: 200px;margin:0 auto;">
+        <button id="submit"  type="button" class="btn btn-outline-secondary"  >OK...</button>
+      </div>
+        <script>
+            $(document).ready(function(){
+              $("#submit").click(function(){
+                $("p").text("Hi,"+  $("#nameinput").val()).fadeIn('slow');
+                $("#answer5").hide();
+                $("#nameinput").fadeIn();
+              });
+            });
+        </script>
+  <!--从这开始复制-->
+        <!--尝试验证是否为空，失败...
+          <div id = 'name' >
+            <form method="post" action="form-handler.html" onsubmit="return checkForm(this)">    
+                <input id="nameinput" class="form-control form-control-lg" name="inputfield"
+                type="text" placeholder="NAME" style="width: 200px;margin:0 auto;">
+                <input class="btn btn-primary" type="submit" value="OK..." >
+                </form>
+              </div>
+              <script>
+                    function checkForm(form){
+                        var errors=[];
+                        if(form.inputfield.value == ""){
+                                errors.push("Input is empty!");
+                        }
+                         else return true;
+                }
+                </script>
+                -->
+                <script>
+                    $(document).ready(function(){
+                        $("#submit").click(function(){
+                        $("p").text("Hi,"+  $("#nameinput").val()).fadeIn('slow');
+                        $("#submit").hide();
+                        $("#nameinput").hide();
+                        $("#answer21").fadeIn();
+                        });
+                    });
+                </script>
+                <button id="answer21"  type="button" class="btn btn-outline-secondary"  style="display: none;">Hi...ma'am?</button>
+                <script>
+                        $(document).ready(function(){
+                            $("#answer21").click(function(){
+                            $("p").text($("#nameinput").val()+", hope you can get what you want here");
+                            $("#answer21").hide();
+                            $("#answer22").fadeIn();
+                            });
+                        });
+                    </script>
+                    <button id="answer22"  type="button" class="btn btn-outline-secondary"  style="display: none;">Continue</button>
+                    <script>
+                            $(document).ready(function(){
+                                $("#answer22").click(function(){
+                                $("p").text($("#nameinput").val()+", Answer me one question now");
+                                $("#answer22").hide();
+                                $("#answer23").fadeIn();
+                                });
+                            });
+                        </script>
+                        <button id="answer23"  type="button" class="btn btn-outline-secondary"  style="display: none;">Continue</button>
+                <script>
+                        $(document).ready(function(){
+                            $("#answer23").click(function(){
+                            $("p").text("Which one following attracts you the most?");
+                            $("#answer23").hide();
+                            $("#answer24").fadeIn();
+                            });
+                        });
+                </script>   
+                <div id = 'answer24' style="display: none;">
+                    <button id="treasure"  type="button" class="btn btn-outline-secondary"  style="background: url(img/treasure-chest.png);width: 100px;height: 100px;border: hidden;"></button>
+                    <button id="love"  type="button" class="btn btn-outline-secondary"  style="background: url(img/爱情.png);width: 100px;height: 100px;border: hidden;"></button>
+                    <button id="challenge"  type="button" class="btn btn-outline-secondary"  style="background: url(img/挑战.png);width: 100px;height: 100px;border: hidden;"></button>
+                </div>  
+  
+  
+  
   </body>
 </html>
