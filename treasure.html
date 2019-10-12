@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--jQuery链接-->
+        <script src="https://code.jquery.com/jquery-3.4.1.js"
+                integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+                crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+                integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+                crossorigin="anonymous"></script>
+        <!--jQuery color链接-->
+        <script src="https://github.com/jquery/jquery-color.git"></script>
+        <!--css <link rel="stylesheet" href="style.css"> -->
+        <!--BootstrapCDN-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!--font-->
+        <link href="https://fonts.googleapis.com/css?family=Yatra+One&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <title>Warrior and Dragon</title>
+        <style>
+          body {
+              font-family: 'Yatra One', cursive;
+              font-size: 30px;
+              width:960px;
+                text-align:center;
+              margin:0 auto;
+              margin-top: 50px;
+              color:white;
+              background-color:black }
+        </style>
+  </head>
+  <body>
+        <img src="img\witch2.png" style="width: 200px;height: 200px;">
+        <br></br>
+        <p class="align-middle">Great, now you can choose one weapons as followed:</p>
+        <div id = weapons>
+                <img id="sword" src="img/宝剑.png" style="width: 100px;height: 100px;">
+                <img id="bomb" src="img/炸弹.png" style="width: 100px;height: 100px;">
+                <img id="cloak" src="img/斗篷.png" style="width: 100px;height: 100px;">
+        </div>
+    <!-- 浮动显示详细信息 -->
+    <div id="detail">
+        <p id='sworddetail' style="display: none;">sword detial</p>
+        <p id='bombdetail' style="display: none;">bomb detial</p>
+        <p id='cloakdetail' style="display: none;">cloak detial</p>
+    </div>
+    <script>
+    $(document).ready(function(){
+        $("#sword").mouseenter(function(){
+          $("#sworddetail").fadeIn();
+        });
+        $("#sword").mouseleave(function(){
+            $("#sworddetail").hide();
+        });
+      });$(document).ready(function(){
+        $("#bomb").mouseenter(function(){
+          $("#bombdetail").fadeIn();
+        });
+        $("#bomb").mouseleave(function(){
+            $("#bombdetail").hide();
+        });
+      });$(document).ready(function(){
+        $("#cloak").mouseenter(function(){
+          $("#cloakdetail").fadeIn();
+        });
+        $("#cloak").mouseleave(function(){
+            $("#cloakdetail").hide();
+        });
+      });
+    </script>
+    <!-- 点击进入不同小游戏 -->
+       
+    
+    </body>
+    </html>

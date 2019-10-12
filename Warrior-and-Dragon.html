@@ -154,12 +154,57 @@
                             });
                         });
                 </script>   
-                <div id = 'answer24' style="display: none;">
-                    <button id="treasure"  type="button" class="btn btn-outline-secondary"  style="background: url(img/treasure-chest.png);width: 100px;height: 100px;border: hidden;"></button>
-                    <button id="love"  type="button" class="btn btn-outline-secondary"  style="background: url(img/爱情.png);width: 100px;height: 100px;border: hidden;"></button>
-                    <button id="challenge"  type="button" class="btn btn-outline-secondary"  style="background: url(img/挑战.png);width: 100px;height: 100px;border: hidden;"></button>
-                </div>  
-  
+                    <div id = 'answer24'style="display: none;">
+                        <img id="treasure"  src="img/treasure-chest.png" style="width: 100px;height: 100px;">
+                        <img id="love" src="img/爱情.png" style="width: 100px;height: 100px;">
+                        <img id="challenge" src="img/挑战.png" style="width: 100px;height: 100px;">
+                        </div> 
+                       
+                            
+                            <script>
+                                $(document).ready(function(){
+                                    $("#sword").mouseenter(function(){
+                                      $("#sworddetail").fadeIn();
+                                    });
+                                    $("#sword").mouseleave(function(){
+                                        $("#sworddetail").hide();
+                                    });
+                                  });$(document).ready(function(){
+                                    $("#bomb").mouseenter(function(){
+                                      $("#bombdetail").fadeIn();
+                                    });
+                                    $("#bomb").mouseleave(function(){
+                                        $("#bombdetail").hide();
+                                    });
+                                  });$(document).ready(function(){
+                                    $("#cloak").mouseenter(function(){
+                                      $("#cloakdetail").fadeIn();
+                                    });
+                                    $("#cloak").mouseleave(function(){
+                                        $("#cloakdetail").hide();
+                                    });
+                                  });
+                                </script>
+                    <script>
+                            $(document).ready(function(){
+                                $("#treasure").click(function(){
+                                $("p").text("Great, now you can choose 1 weapons as followed:");
+                                $("#treasure").hide();
+                                $("#love").hide();
+                                $("#challenge").hide();
+                                $("#weapon").fadeIn();
+                                });
+                            });
+                        </script>
+                  <div id="weapon" style="display: none;">  
+                    <a href="sword.html"><img  id="sword" src="img/宝剑.png" style="width: 100px;height: 100px;"></a>
+                    <a href="bomb.html"><img id="bomb"src="img/炸弹.png"  style="width: 100px;height: 100px;"></a>
+                    <a href="cloak.html"><img  id="cloak"src="img/斗篷.png"  style="width: 100px;height: 100px;"></a>
+                  </div>  
+                  <div id='sworddetail' style="display: none;">sword detial</div>
+                  <div id='bombdetail' style="display: none;">bomb detial</div>
+                  <div id='cloakdetail' style="display: none;">cloak detial</div>
+                  
   
   
   </body>
