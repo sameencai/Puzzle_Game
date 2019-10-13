@@ -19,7 +19,7 @@
         <style>
           body {
               font-family: 'Yatra One', cursive;
-              font-size: 30px;
+              font-size: 2rem;
                 text-align:center;
               margin:0 auto;
               margin-top: 50px;
@@ -28,7 +28,9 @@
         </style>
   </head>
   <body>
-    <img src="img\witch2.png" style="width: 200px;height: 200px;">
+    <img id = "witch"src="img\witch2.png" style="width: 200px;height: 200px;">
+    <img id='dragon' src="img\dragon1.jpeg" style="width: 200px;height: 200px;display: none;">
+    <img id='princess' src="img\princess.png" style="width: 200px;height: 200px;display: none;">
     <br></br>
     <p class="align-middle">Wake up, my warrior</p>
       <button id="answer1"type="button" class="btn btn-outline-secondary">Hum...What?</button>
@@ -195,16 +197,134 @@
                                 });
                             });
                         </script>
-                  <div id="weapon" style="display: none;">  
-                    <a href="sword.html"><img  id="sword" src="img/宝剑.png" style="width: 100px;height: 100px;"></a>
-                    <a href="bomb.html"><img id="bomb"src="img/炸弹.png"  style="width: 100px;height: 100px;"></a>
-                    <a href="cloak.html"><img  id="cloak"src="img/斗篷.png"  style="width: 100px;height: 100px;"></a>
-                  </div>  
-                  <div id='sworddetail' style="display: none;">sword detial</div>
-                  <div id='bombdetail' style="display: none;">bomb detial</div>
-                  <div id='cloakdetail' style="display: none;">cloak detial</div>
-                  
-  
+      <div id="weapon" style="display: none;">  
+        <!--<a href="sword.html"><img  id="sword" src="img/宝剑.png" style="width: 100px;height: 100px;"></a>-->
+        <img  id="sword" src="img/宝剑.png" style="width: 100px;height: 100px;">
+        <a href="bomb.html"><img id="bomb"src="img/炸弹.png"  style="width: 100px;height: 100px;"></a>
+        <a href="cloak.html"><img  id="cloak"src="img/斗篷.png"  style="width: 100px;height: 100px;"></a>
+      
+      </div>  
+      <div id='sworddetail' style="display: none;">sword detial</div>
+      <div id='bombdetail' style="display: none;">bomb detial</div>
+      <div id='cloakdetail' style="display: none;">cloak detial</div>
+<!--sword game-->
+      <script>
+        $(document).ready(function(){
+            $("#sword").click(function(){
+            $("p").text("Hello...FRIEND");
+            $("#sword").hide();
+            $("#bomb").hide();
+            $("#cloak").hide();
+            $("#cloak").hide();
+            $("#witch").hide();
+            $("#dragon").fadeIn();
+            $("#answer31").fadeIn();
+            $( "body" ).animate({
+      backgroundColor: "#0B3140",
+      });
+            });
+        });
+    </script>
+      
+      <button id="answer31"  type="button" class="btn btn-outline-secondary" style="display:none">What? Who's your friend? You evil beast!</button>
+      <script>
+              $(document).ready(function(){
+                  $("#answer31").click(function(){
+                  $("#answer31").hide();
+                  $("p").hide();
+                  $("#attack").fadeIn();
+                 
+                  });
+              });
+          </script>  
+
+      <div id="attack" style="display: none;">
+        <div id="blood">10</div>
+      <button id="bloodRemain" onclick="bloodCountDown()"style="background: url(img/宝剑1.png);width: 100px;height: 100px;border: hidden;"></button>
+      <div id="hint" style="opacity: 0.5;font-size: 20px;">click the sword to attack</div>
+      </div>
+      <script>
+      function bloodCountDown(){
+      var currentVal = document.getElementById("blood").innerHTML;
+      if (currentVal > 1){
+          newVal = currentVal - 1;
+          $( "body" ).animate({
+      backgroundColor: "red",
+      }, 50)
+      $( "body" ).animate({
+      backgroundColor: "#0B3140",
+      }, 50)
+      }
+      else {
+          $("#attack").hide();
+          $("#win").fadeIn();
+          $("#answer32").fadeIn();
+      }
+      document.getElementById("blood").innerHTML = newVal;
+      }
+      </script>
+      <div id="win" style="display: none;">AH...Sorry,FRIEND...</div>
+      <button id="answer32"  type="button" class="btn btn-outline-secondary" style="display: none;">This dragon must have mental problem...</button>
+      <script>
+      $(document).ready(function(){
+          $("#answer32").click(function(){
+          $("#dragon").hide();
+          $("#win").hide();
+          $("#answer32").hide();
+          $("#princess").fadeIn();
+          $("#princess1").fadeIn();
+          $("#answer33").fadeIn();
+          });
+      });
+      </script>
+      <div id="princess1" style="display: none;">You save me! Young warrior, you are my hero!</div>
+      <button id="answer33"  type="button" class="btn btn-outline-secondary" style="display: none;">God, are you the princess?</button>
+      <script>
+      $(document).ready(function(){
+        $("#answer33").click(function(){
+        $("#princess1").hide();
+        $("#answer33").hide();
+        $("#princess2").fadeIn();
+        $("#princess3").fadeIn();
+        $("#answer34").fadeIn();
+        });
+      });
+
+      </script>
+      <div id="princess2" style="display: none;">Yes! I think I fall in love with you already</div>
+      <div id="princess3" style="display: none;"> let's get married and share the fortune here!</div>
+      <button id="answer34"  type="button" class="btn btn-outline-secondary" style="display: none;">O...OK...Of course</button>
+      <script>
+      $(document).ready(function(){
+        $("#answer34").click(function(){
+        $("#princess").hide();
+        $("#princess2").hide();
+        $("#princess3").hide();
+        $("#answer34").hide();
+        $("#witch").fadeIn();
+        $("#witch1").fadeIn();
+        $("#answer35").fadeIn();
+        $( "body" ).animate({
+      backgroundColor: "black",
+      })
+        });
+      });
+      </script>
+      <div id="witch1" style="display: none;">Another fallen soul</div>
+      <button id="answer35"  type="button" class="btn btn-outline-secondary" style="display: none;">What? What happened to my voice?!</button>
+      <script>
+          $(document).ready(function(){
+              $("#answer35").click(function(){
+              $("#witch1").hide();
+            $("#answer35").hide();
+            $("#witch2").fadeIn();
+            $("#answer36").fadeIn();
+            });
+          })
+        </script>
+      <div id="witch2" style="display: none;">The night is dark and full of terrors</div>
+      <a href="index.html"><button id="answer36"  type="button" class="btn btn-outline-secondary" style="display: none;">TRY AGAIN</button></a>
+
   
   </body>
 </html>
